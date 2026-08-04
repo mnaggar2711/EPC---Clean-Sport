@@ -100,6 +100,61 @@ padding:70px;
 .card{
 background:white;
 padding:35px;
+  .alert{
+
+background:#FFD447;
+
+color:#222;
+
+padding:15px;
+
+font-weight:700;
+
+border-radius:8px;
+
+margin:0 auto 35px auto;
+
+max-width:900px;
+
+}
+
+.search-box{
+
+margin-top:40px;
+
+display:flex;
+
+justify-content:center;
+
+gap:10px;
+
+flex-wrap:wrap;
+
+}
+
+.search-box input{
+
+width:420px;
+
+max-width:90%;
+
+padding:16px;
+
+border-radius:8px;
+
+border:none;
+
+font-size:17px;
+
+}
+
+.search-box button{
+
+background:#00b894;
+
+color:white;
+
+}
 border-radius:12px;
 box-shadow:0 8px 20px rgba(0,0,0,.08);
 transition:.3s;
