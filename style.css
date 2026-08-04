@@ -176,3 +176,54 @@ text-align:center;
 padding:20px;
 margin-top:30px;
 }
+.result-card{
+
+margin:50px auto;
+
+background:white;
+
+max-width:700px;
+
+padding:35px;
+
+border-radius:15px;
+
+box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+color:#222;
+
+animation:fade .4s;
+
+}
+
+.result-card h2{
+
+margin-bottom:15px;
+
+}
+
+.result-card h3{
+
+margin-bottom:15px;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
