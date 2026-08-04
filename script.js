@@ -2,17 +2,99 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const athleteBtn = document.querySelector(".athlete");
 const committeeBtn = document.querySelector(".committee");
+const searchBtn = document.querySelector(".search-box button");
+const searchInput = document.querySelector(".search-box input");
 
-athleteBtn.addEventListener("click", () => {
+athleteBtn.onclick = () => {
+    alert("Athlete Portal - Coming Soon");
+};
 
-alert("Athlete Dashboard\n\nComing Soon");
+committeeBtn.onclick = () => {
+    alert("Committee Dashboard - Coming Soon");
+};
 
-});
+const supplements = {
 
-committeeBtn.addEventListener("click", () => {
+    "creatine":{
+        status:"Approved",
+        color:"#16a34a",
+        name:"Creapure Creatine",
+        note:"Reviewed by Anti-Doping Committee"
+    },
 
-alert("Committee Dashboard\n\nComing Soon");
+    "gold standard":{
+        status:"Approved",
+        color:"#16a34a",
+        name:"Optimum Nutrition Gold Standard Whey",
+        note:"Approved Protein Supplement"
+    },
 
-});
+    "omega 3":{
+        status:"Approved",
+        color:"#16a34a",
+        name:"Omega 3",
+        note:"Safe to Use"
+    },
+
+    "c4":{
+        status:"Needs Review",
+        color:"#f59e0b",
+        name:"C4 Pre Workout",
+        note:"Submit Before Use"
+    }
+
+};
+
+searchBtn.onclick=function(){
+
+const value=searchInput.value.trim().toLowerCase();
+
+let old=document.querySelector(".result-card");
+
+if(old) old.remove();
+
+let card=document.createElement("div");
+
+card.className="result-card";
+
+if(supplements[value]){
+
+card.innerHTML=`
+
+<h2 style="color:${supplements[value].color}">
+${supplements[value].status}
+</h2>
+
+<h3>${supplements[value].name}</h3>
+
+<p>${supplements[value].note}</p>
+
+`;
+
+}else{
+
+card.innerHTML=`
+
+<h2 style="color:#dc2626">
+
+Not Found
+
+</h2>
+
+<p>
+
+This supplement is not available in the database.
+
+Please submit it for Anti-Doping review before purchasing.
+
+</p>
+
+`;
+
+}
+
+document.querySelector(".hero").appendChild(card);
+
+};
 
 });
