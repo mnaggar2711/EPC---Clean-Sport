@@ -17,7 +17,27 @@ athleteBtn.onclick = () => {
 committeeBtn.onclick = () => {
     alert("Committee Dashboard - Coming Soon");
 };
+submitBtn.onclick=()=>{
 
+modal.style.display="flex";
+
+};
+
+close.onclick=()=>{
+
+modal.style.display="none";
+
+};
+
+window.onclick=(e)=>{
+
+if(e.target==modal){
+
+modal.style.display="none";
+
+}
+
+};
 const supplements = {
 
     "creatine":{
