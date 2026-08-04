@@ -2,6 +2,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const athleteBtn = document.querySelector(".athlete");
 const committeeBtn = document.querySelector(".committee");
+    const submitBtn=document.querySelector(".submit");
+
+const modal=document.getElementById("modal");
+
+const close=document.querySelector(".close");
 const searchBtn = document.querySelector(".search-box button");
 const searchInput = document.querySelector(".search-box input");
 
